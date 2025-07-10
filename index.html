@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Skills Validator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>GitHub Skills Completion Validator</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <p>Check if users have completed the "Getting Started with GitHub Copilot" exercise</p>
+        </header>
+
+        <main>
+            <form id="validation-form" class="form-section">
+                <div class="input-group">
+                    <label for="usernames">GitHub Usernames (one per line):</label>
+                    <textarea 
+                        id="usernames" 
+                        placeholder="Enter GitHub usernames, one per line..."
+                        required
+                        aria-describedby="usernames-help"
+                    ></textarea>
+                    <small id="usernames-help">Enter GitHub usernames separated by new lines</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="github-token">GitHub Personal Access Token (optional):</label>
+                    <input 
+                        type="password" 
+                        id="github-token" 
+                        placeholder="ghp_..."
+                        aria-describedby="token-help"
+                    >
+                    <small id="token-help">Optional: Helps avoid rate limiting for large batches</small>
+                </div>
+
+                <button type="submit" id="check-btn" class="check-button">
+                    <span class="button-text">Check Completion</span>
+                    <span class="loading-spinner" hidden></span>
+                </button>
+            </form>
+
+            <section id="results-section" class="results-section" hidden>
+                <h2>Validation Results</h2>
+                <div id="summary-stats" class="summary-stats"></div>
+                <div id="results-container" class="results-container"></div>
+            </section>
+
+            <div id="error-message" class="error-message" hidden></div>
+        </main>
+
+        <footer>
+            <p>This tool checks for the completion phrase: "You've successfully completed this exercise!" in the skills repository README.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
