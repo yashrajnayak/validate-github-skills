@@ -2,8 +2,6 @@
 
 A modern web application to validate completion of the "Getting Started with GitHub Copilot" exercise for multiple GitHub users.
 
-<img width="2507" height="1542" alt="image" src="https://github.com/user-attachments/assets/f130af5c-c49a-47bf-9870-1b0c47817aa1" />
-
 ## Features
 
 - **Batch Validation**: Check multiple GitHub usernames at once
@@ -12,6 +10,8 @@ A modern web application to validate completion of the "Getting Started with Git
 - **Detailed Results**: Comprehensive status reporting with error handling
 - **Responsive Design**: Works on desktop and mobile devices
 - **Accessibility**: Semantic HTML and keyboard navigation support
+
+<img width="2507" height="1542" alt="image" src="https://github.com/user-attachments/assets/f130af5c-c49a-47bf-9870-1b0c47817aa1" />
 
 ## How It Works
 
